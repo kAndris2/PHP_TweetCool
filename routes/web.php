@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::post('/tweet', 'HomeController@addTweet')->name('tweet');
+Route::get('/messageboard', 'HomeController@gotoMessageBoard');

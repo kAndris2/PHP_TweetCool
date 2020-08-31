@@ -15,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -40,6 +40,7 @@ class HomeController extends Controller
 
     public function gotoMessageBoard()
     {
-        return view("messageboard", $tweets);
+        $tweets = ['asd','dsa'];
+        return view("messageboard")->with(array('tweets'=>$tweets)) ;
     }
 }
