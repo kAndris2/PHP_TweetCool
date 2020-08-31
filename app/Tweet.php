@@ -11,8 +11,8 @@ class Tweet extends Model
     public $date;
 
     function __construct($username, $content) {
-        $userName = $username;
-        $message = $content;
-        $date = date("Y-m-d h:i:sa");
+        $this->userName = $username;
+        $this->message = $content;
+        $this->date = date("Y-m-d h:i:sa");
     }
 }

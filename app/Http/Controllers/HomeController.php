@@ -29,24 +29,18 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function addTweet($username, $content) 
+    public function addTweet(Request $request) 
     {
         array_push
         (
-            $tweets, 
-            new Tweet ($username, $content)
+            $this->tweets, 
+            new Tweet ($request['username'], $request['message'])
         );
-        return view("messageboard", $tweets);
+        return view("messageboard")->with(array('tweets'=>$this->tweets));
     }
 
     public function gotoMessageBoard()
     {
-        $tweets =  array();
-       array_push
-       (
-           $tweets,
-           new Tweet ('Jóska', 'fdsdgfsfd')
-       );
-        return view("messageboard")->with(array('tweets'=>$tweets)) ;
+        return view("messageboard")->with(array('tweets'=>$this->tweets));
     }
 }
