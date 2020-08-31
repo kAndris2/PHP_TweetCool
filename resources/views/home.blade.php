@@ -21,8 +21,8 @@
                 <textarea id="textbox" name="message" required></textarea><br><br>
 
                 <input type="submit" value="Submit">
-                <button onclick="window.location.href ='messageboard';">Go to message board</button>
             </form>
+            <button onclick="window.location.href ='messageboard';">Go to message board</button>
         </ul>
 
     </body>

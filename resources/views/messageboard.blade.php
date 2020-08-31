@@ -1,3 +1,5 @@
 <html>
-    <h1>Fakk!</h1>
+    @foreach($tweets as $tweet) {
+        <h1>{{$tweet->date}}</h1>
+    }
 </html>
