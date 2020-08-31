@@ -7,7 +7,6 @@ use App\Tweet;
 
 class HomeController extends Controller
 {
-    private $tweets = array();
 
     /**
      * Create a new controller instance.
@@ -31,12 +30,12 @@ class HomeController extends Controller
 
     public function addTweet(Request $request) 
     {
-        array_push
-        (
-            $this->tweets, 
-            new Tweet ($request['username'], $request['message'])
-        );
-        return view("messageboard")->with(array('tweets'=>$this->tweets));
+        Tweet::create([
+            'username' => $request['username'],
+            'content' => $request['message'],
+            'date' => date("Y-m-d H:i:s")
+        ]);
+        $this->gotoMessageBoard();
     }
 
     public function gotoMessageBoard()
