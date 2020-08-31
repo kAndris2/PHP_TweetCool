@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>TweetCool</title>
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
