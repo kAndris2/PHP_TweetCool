@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tweet;
 
 class HomeController extends Controller
 {
@@ -40,6 +41,12 @@ class HomeController extends Controller
 
     public function gotoMessageBoard()
     {
-        return view("messageboard", $tweets);
+        $tweets =  array();
+       array_push
+       (
+           $tweets,
+           new Tweet ('Jóska', 'fdsdgfsfd')
+       );
+        return view("messageboard")->with(array('tweets'=>$tweets)) ;
     }
 }
