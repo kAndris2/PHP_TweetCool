@@ -40,6 +40,6 @@ class HomeController extends Controller
 
     public function gotoMessageBoard()
     {
-        return view("messageboard")->with(array('tweets'=>$this->tweets));
+        return view("messageboard")->with(array('tweets'=>Tweet::get()));
     }
 }

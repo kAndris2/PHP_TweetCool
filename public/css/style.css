@@ -29,10 +29,10 @@ a.name {
 
 a.date {
     font-style: oblique;
-    color: gray;
+    color: darkslategrey;
 }
 
 p.tweet {
-    color: Highlight;
+    color: darkred;
     font-weight: bolder;
 }

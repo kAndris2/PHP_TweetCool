@@ -1,6 +1,6 @@
 <html>
         <head>
-            <title>All messages></title>
+            <title>All tweets</title>
             <link rel="stylesheet" href="css/style.css">
         </head>
 
@@ -12,11 +12,11 @@
             <div style="background-color: darkcyan">
                 @foreach ($tweets as $tweet)
                     <ul class="nav-tabs">
-                        <a class="name" id="username">{{$tweet->userName}}:</a>
+                        <a class="name" id="username">{{$tweet->username}}:</a>
                         <br>
                         <a class="date" id="date">({{$tweet->date}})</a>
                         <br>
-                        <p class="tweet" id="tweet">{{$tweet->message}}</p>
+                        <p class="tweet" id="tweet">{{$tweet->content}}</p>
                     </ul>
                  @endforeach
              </div>
