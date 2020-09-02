@@ -30,6 +30,7 @@ class HomeController extends Controller
 
     public function addTweet(Request $request) 
     {
+        date_default_timezone_set("Europe/Budapest");
         Tweet::create([
             'username' => $request['username'],
             'content' => $request['message'],
