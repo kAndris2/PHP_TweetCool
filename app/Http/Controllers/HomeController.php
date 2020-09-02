@@ -36,7 +36,7 @@ class HomeController extends Controller
             'content' => $request['message'],
             'date' => date("Y-m-d H:i:s")
         ]);
-        $this->gotoMessageBoard();
+        return $this->gotoMessageBoard();
     }
 
     public function gotoMessageBoard()
